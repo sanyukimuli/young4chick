@@ -1,0 +1,36 @@
+body {
+    background-color: #f5f0df;
+    font-family: Arial;
+    color: #503c2c;
+}
+
+.btn-light {
+    border: solid #503c2c;
+    background-color: #fcd556;
+}
+
+form {
+    background-color: #fcd556;
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.list-group {
+    position: fixed;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+button, image {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+#submit-btn {
+    background-color: #f5f0df;
+}
+
