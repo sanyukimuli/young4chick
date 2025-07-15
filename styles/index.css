@@ -1,36 +1,128 @@
+/* modern sans-serif font as the main font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    background-color: #f5f0df;
-    font-family: Arial;
-    color: #503c2c;
+  background-color: #fafafa; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #503c2c; 
 }
 
+
+/* Buttons */
 .btn-light {
     border: solid #503c2c;
     background-color: #fcd556;
+    color: #503c2c;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /*bg colour is changing on hover at this speed*/
 }
+
+.btn-light:hover, 
+.btn-light:focus {
+    background-color: #e6bf3b;
+    color: #3d2e1c;
+    border-color: #3d2e1c;
+}
+
 
 form {
-    background-color: #fcd556;
-    border-radius: 40px;
-    padding: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+     background-color: #ffe6a7; 
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #503c2c;
 }
 
+
 nav {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .list-group {
     position: fixed;
     left: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', Arial, sans-serif;
+    
 }
 
-button, image {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+/* Buttons and images need to have the same shadow */
+button, img {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 #submit-btn {
     background-color: #f5f0df;
+    color: #503c2c;
+    font-weight: 600;
 }
+
+
+.navbar-brand-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #2a2a2a;
+    user-select: none; /*makes it unhighlightable so people can't copy your logo*/
+}
+
+/*spacing between the logo image and text */
+.navbar-brand.d-flex.align-items-center.gap-2 img {
+    border-radius: 8px;
+}
+
+
+h4 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #3d2e1c;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+p {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #503c2c;
+}
+
+#home-section {
+  background-color: #fff4d1; 
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(80, 60, 44, 0.2);
+}
+
+#about-section {
+  background-color: #ffdca1; 
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(80, 60, 44, 0.25);
+}
+
+#kit-section {
+  background-color: #ffc75f; 
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(80, 60, 44, 0.25);
+}
+
+#register-section {
+  background-color: #a3be8c; 
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(80, 60, 44, 0.3);
+}
+
 
