@@ -1,58 +1,85 @@
-body {
-  background-color: #fafafa; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #503c2c; 
-}
 
-/* Buttons */
-.btn-light {
-    border: solid #503c2c;
-    background-color: #fcd556;
-    color: #503c2c;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease; /*bg colour is changing on hover at this speed*/
-}
+    /* custom styles */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-.btn-light:hover, 
-.btn-light:focus {
-    background-color: #e6bf3b;
-    color: #3d2e1c;
-    border-color: #3d2e1c;
-}
+    .navbar-brand-text {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #2a2a2a;
+      user-select: none;
+    }
 
-form {
-     background-color: #ffe6a7; 
-  border-radius: 40px;
-  padding: 40px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #503c2c;
-}
+    .navbar-brand.d-flex.align-items-center.gap-2 img {
+      border-radius: 8px;
+    }
 
-/* Buttons and images need to have the same shadow */
-button, img {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    nav {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-#submit-btn {
-    background-color: #f5f0df;
-    color: #503c2c;
-    font-weight: 600;
-}
+    body {
+      background-color: #fafafa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #503c2c;
+    }
 
-h4 {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-weight: 700;
-    color: #3d2e1c;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
+    .btn-light {
+      border: solid #503c2c;
+      background-color: #fcd556;
+      color: #503c2c;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
 
+    .btn-light:hover,
+    .btn-light:focus {
+      background-color: #e6bf3b;
+      color: #3d2e1c;
+      border-color: #3d2e1c;
+    }
 
-p {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    color: #503c2c;
-}
+    form {
+      background-color: #ffe6a7;
+      border-radius: 40px;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #503c2c;
+    }
+
+    button,
+    img {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #submit-btn {
+      background-color: #f5f0df;
+      color: #503c2c;
+      font-weight: 600;
+    }
+
+    h4,
+    h2,
+    h1 {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 700;
+      color: #3d2e1c;
+      text-align: center;
+    }
+
+    p {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: #503c2c;
+    }
+
+    .card {
+      border-radius: 20px;
+      background-color: #fff9eb;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
