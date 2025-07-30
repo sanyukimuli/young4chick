@@ -1,0 +1,130 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Young4ChickS
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css')
+  link(href='https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='/styles/index.css')
+nav.navbar.bg-body-tertiary
+  .container-fluid
+    a.navbar-brand.d-flex.align-items-center.gap-2(href='#')
+      img(src='/images/chicklogo.jpeg' alt='Logo' width='60' height='54')
+      span.navbar-brand-text Young4Chick
+    button#homepage-login-btn.btn.btn-light(onclick="document.getElementById('login-modal').style.display='block'") Login
+    #login-modal.modal
+      span.close(onclick="document.getElementById('login-modal').style.display='none'" title='Close Modal') &times;
+      form#login-form.modal-content.animate
+        .container(action='/login' method='POST')
+          label(for='login-username')
+            b Username
+          input#login-username.form-control(type='text' placeholder='Enter Username' name='username' required='')
+          label(for='login-password')
+            b Password
+          input#login-password.form-control(type='password' placeholder='Enter Password' name='password' required='')
+          button#login-btn.btn.btn-light.mt-2(type='submit') Login
+br
+.row
+  .col-4
+    #list-example.list-group
+      a.list-group-item.list-group-item-action(href='#home-section') Home
+      a.list-group-item.list-group-item-action(href='#about-section') About Us
+      a.list-group-item.list-group-item-action(href='#kit-section') Chickstarter Kit
+      a.list-group-item.list-group-item-action(href='#register-section') Register as a Young Farmer
+  .col-8
+    .scrollspy-example(data-bs-spy='scroll' data-bs-target='#list-example' data-bs-smooth-scroll='true' tabindex='0')
+      h4#home-section Home
+      p
+        | Welcome to Young4Chick, a youth-powered poultry initiative equipping the next generation of farmers with the resources, knowledge, and support they need to thrive! We&rsquo;re building a vibrant ecosystem of young entrepreneurs aged 18&ndash;30 who are ready to transform poultry farming across Uganda. 
+        br
+        br
+        |  Whether you&apos;re just curious or already raising your first chicks, Young4Chick is your launchpad for sustainable agricultural impact and economic empowerment!
+      h4#about-section About Us
+      p
+        | Young4Chick was birthed out of a vision to bridge the gap between youth unemployment and agriculture by providing meaningful pathways into poultry farming. Founded by a youth MP passionate about rural innovation, the initiative connects young people with starter chicks, training, and ongoing mentorship. 
+        br
+        br
+        | Through collaboration with brooder managers, sales reps, and agricultural experts, we ensure every registered young farmer gets the support they need to grow from beginner to business-ready.
+      h4#kit-section Chickstarter Kit
+      p
+      p
+        strong Chickstarter Kit: How to Get Started
+        br
+        br
+        strong Step 1: Register as a Young Farmer
+        br
+        |     To be eligible, you must be between 18&ndash;30 years old. Fill out the registration form and once verified, you&apos;re eligible to submit chick requests once every 4 months.
+        br
+        br
+        strong Step 2: Request for Chicks
+        br
+        |     Only registered farmers can request chicks. Fill in the chick request form stating the number of chicks (100 for starters, up to 500 for returning farmers), the type of chicks (Broilers or Layers), and your farmer status (Starter or Returning). Your request will be sent to the Brooder Manager for approval.
+        br
+        br
+        strong Step 3: Wait for Approval
+        br
+        |     The Brooder Manager checks available stock and approves valid requests. Once your request is approved, the system updates to reflect reduced stock and your request will be marked as &quot;Ready for Pickup&quot;.
+        br
+        br
+        strong Step 4: Pick Up Chicks &amp; Feed
+        br
+        |     All chicks cost UGX 1,650 each, regardless of type. Each farmer is also eligible for up to 2 bags of feed, which are payable after 2 months. Once you receive your chicks, a Sales Rep will confirm the handover and record it as a complete sale in the system!
+        br
+        br
+        |     This kit is your launchpad into the poultry world&mdash;designed to help you build sustainable wealth through farming, what are you waiting for?
+      p
+      h4#register-section Register as a Young Farmer
+      p You must be between 18&ndash;30 years old to register.
+      form#young-farmer-form.row.g-3.needs-validation(action='/register' method='POST' novalidate='')
+        .col-md-4
+          label.form-label(for='first-name') First Name
+          input#first-name.form-control(type='text' required='' name='firstName')
+          .valid-feedback Looks good!
+        .col-md-4
+          label.form-label(for='last-name') Last Name
+          input#last-name.form-control(type='text' required='' name='lastName')
+          .valid-feedback Looks good!
+        .col-md-6
+          label.form-label(for='address') Full Address
+          input#address.form-control(type='text' required='' name='address')
+          .invalid-feedback Please provide a valid address.
+        .col-md-4
+          label.form-label(for='phone') Phone Number
+          input#phone.form-control(type='text' required='' name='phoneNumber')
+          .valid-feedback Looks good!
+        .col-md-4
+          label.form-label(for='email') Email
+          input#email.form-control(type='email' required='' name='email')
+          .valid-feedback Looks good!
+        .col-md-4
+          label.form-label(for='age') Age
+          input#age.form-control(type='number' required='' min='18' max='30' name='age')
+          .valid-feedback Looks good!
+        .col-md-4
+          label.form-label Gender
+          br
+          .form-check.form-check-inline
+            input#gender-male.form-check-input(type='radio' name='gender' value='Male' required='')
+            label.form-check-label(for='gender-male') Male
+          .form-check.form-check-inline
+            input#gender-female.form-check-input(type='radio' name='gender' value='Female')
+            label.form-check-label(for='gender-female') Female
+          .form-check.form-check-inline
+            input#gender-other.form-check-input(type='radio' name='gender' value='Other')
+            label.form-check-label(for='gender-other') Other
+        .col-md-4
+          label.form-label(for='nin') National ID Number (NIN)
+          input#nin.form-control(type='text' required='' name='nin')
+          .valid-feedback Looks good!
+        .col-md-4
+          label.form-label(for='recommender-name') Recommender&apos;s Full Name
+          input#recommender-name.form-control(type='text' required='' name='recName')
+          .valid-feedback Looks good!
+        .col-md-4
+          label.form-label(for='recommender-nin') Recommender&apos;s NIN
+          input#recommender-nin.form-control(type='text' required='' name='recNin')
+          .valid-feedback Looks good!
+        .col-12
+          button#submit-registration.btn.btn-light(type='submit') Submit Form
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js')
+script(src='/js/index.js')
